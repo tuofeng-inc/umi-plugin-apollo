@@ -1,18 +1,20 @@
 # umi-plugin-apollo
 
-[![NPM version](https://img.shields.io/npm/v/umi-plugin-apollo.svg?style=flat)](https://npmjs.org/package/umi-plugin-apollo)
+[![NPM version](https://img.shields.io/npm/v/@tuofeng/umi-plugin-apollo.svg?style=flat)](https://npmjs.org/package/@tuofeng/umi-plugin-apollo)
 
-Umi plugin for apollo graphql client.
+Umi plugin for apollo graphql client with hooks support.
+
+fork from https://github.com/lemol/umi-plugin-apollo add react-apollo-hooks
 
 ### Install
 
 ```bash
-$ yarn add umi-plugin-apollo    # OR npm install --save umi-plugin-apollo
+$ yarn add @tuofeng/umi-plugin-apollo    # OR npm install --save @tuofeng/umi-plugin-apollo
 ```
 
 ### Setup
 
-Having setup the `umi-plugin-react`, add the `umi-plugin-apollo` plugin:
+Having setup the `umi-plugin-react`, add the `@tuofeng/umi-plugin-apollo` plugin:
 
 ```js
 // .umirc.js
@@ -28,7 +30,7 @@ export default {
       },
       // other umi-plugin-react options
     }],
-    ['umi-plugin-apollo'],
+    ['@tuofeng/umi-plugin-apollo'],
   ]
 }
 ```
