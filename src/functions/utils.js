@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { join, basename, relative, resolve } from 'path';
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync } from 'fs';
 import globby from 'globby';
 
 export const capitalizeFirstLetter = x => `${x.charAt(0).toUpperCase()}${x.slice(1)}`;
@@ -88,7 +88,7 @@ export const getOptionsFileInternal = ({ opts, joinApolloPath, joinAbsApolloPath
   generateOptionsFile = () => {
     const defaultOptionsTemplatePath = joinApolloTemplatePath('default-options.js');
     const defaultOptionsContent = readFileSync(defaultOptionsTemplatePath, 'utf-8');
-    writeFileSync(defaultOptionsPath, defaultOptionsContent);
+    if (!existsSync(defaultOptionsPath)) writeFileSync(defaultOptionsPath, defaultOptionsContent);
   };
 
   return {
